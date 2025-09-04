@@ -10,6 +10,7 @@
             color: black;
             background-color: white;
             margin: 20px;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         h1 {
             text-align: center;
@@ -24,17 +25,26 @@
         hr {
             border: 1px solid black;
         }
+        /* Flash effect for clicked headings */
+        .flash {
+            animation: flashEffect 0.5s;
+        }
+        @keyframes flashEffect {
+            0% { color: blue; }
+            50% { color: black; }
+            100% { color: blue; }
+        }
     </style>
 </head>
 <body>
-    <h1>This is my website.</h1>
-    <p>Okay.</p>
+    <h1>Surya Mokkapati</h1>
+    <p>This is my website.</p>
     
     <ul>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#astronomy">Literature</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#journals">Thoughts</a></li>
+        <li><a href="#resume" onclick="flashTitle('resume')">Resume</a></li>
+        <li><a href="#astronomy" onclick="flashTitle('astronomy')">Literature</a></li>
+        <li><a href="#philosophy" onclick="flashTitle('philosophy')">Philosophy</a></li>
+        <li><a href="#journals" onclick="flashTitle('journals')">Thoughts</a></li>
     </ul>
 
     <hr>
@@ -58,6 +68,24 @@
     <hr>
 
     <h2 id="journals">Thoughts</h2>
+    <p>My thoughts for better or for worse.</p>
+    <p>I will have a thought eventually.</p>
+
+    <script>
+        // Function to make the section title flash blue when clicked
+        function flashTitle(sectionId) {
+            const sectionTitle = document.getElementById(sectionId);
+            sectionTitle.classList.add('flash'); // Add the flash class to the title
+
+            // Remove the flash class after the animation ends (0.5s)
+            setTimeout(() => {
+                sectionTitle.classList.remove('flash');
+            }, 500); // Match the duration of the flash effect
+        }
+    </script>
+</body>
+</html>
+
     <p>My thoughts for better or for worse.</p>
     <p>I will have a thought eventually.</p>
 </body>
