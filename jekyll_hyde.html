@@ -10,6 +10,7 @@
             color: black;
             background-color: white;
             margin: 20px;
+            position: relative; /* Allow absolute positioning of the Chi Rho */
         }
         h1 {
             text-align: center;
@@ -17,9 +18,23 @@
         p {
             text-align: center;
         }
+
+        /* Position the Chi Rho in the top-right corner */
+        .chi-rho {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+        }
     </style>
 </head>
 <body>
+    <!-- Chi Rho Image linked to the homepage -->
+    <a href="index.html">
+        <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/refs/heads/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
+    </a>
+
     <h1>The Strange Case of Dr. Jekyll and Mr. Hyde</h1>
     <p>I will update this with my review eventually. I am riddled with procrastination and doubt of my will to overcome it.</p>
 </body>
