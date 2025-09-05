@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,9 @@
             font-family: "Times New Roman", serif;
             color: black;
             background-color: white;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            position: relative;
-            overflow: hidden; /* Prevents scrollbars from appearing */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><style type="text/css">line, polyline { fill: none; stroke: #000; stroke-width: 2.5; }</style><line x1="0" y1="1.25" x2="18" y2="1.25" id="border" /><use xlink:href="#border" transform="translate(0 15.5)" /><polyline points="1.25,16.7 1.25,5.7 9.9,5.7 9.9,9.4" id="wave" /><use xlink:href="#wave" transform="rotate(180 7.75 9)" /></svg>');
-            background-repeat: repeat; /* Makes the SVG repeat */
-            background-size: 18px 18px; /* Set the size of the SVG to match the viewBox */
-            background-position: top left, top right, bottom left, bottom right; /* To position at each corner */
+            margin: 20px;
+            scroll-behavior: smooth; /* Smooth scrolling */
+            position: relative; /* Allow absolute positioning of the Chi Rho */
         }
 
         h1 {
@@ -37,33 +32,38 @@
             border: 1px solid black;
         }
 
+        /* Flash effect for clicked headings */
         .flash {
             animation: flashEffect 0.5s;
         }
 
         @keyframes flashEffect {
-            0% { color: blue; }
-            50% { color: black; }
-            100% { color: blue; }
+            0% {
+                color: blue;
+            }
+
+            50% {
+                color: black;
+            }
+
+            100% {
+                color: blue;
+            }
         }
 
+        /* Position the Chi Rho in the top-right corner with smaller size */
         .chi-rho {
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 30px;
+            width: 30px; /* Adjusted smaller size */
             height: auto;
         }
-
-        .content {
-            position: relative;
-            z-index: 1; /* Ensures content is above the SVG */
-            padding: 20px;
-        }
-
     </style>
 </head>
+
 <body>
+    <!-- Chi Rho Image linked to the homepage -->
     <a href="index.html">
         <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
     </a>
@@ -81,7 +81,7 @@
     <hr>
 
     <h2 id="resume">Resume</h2>
-    <p>CV - Curriicuulum Vitaea:</p>
+    <p>CV - Curriicuulum Vitaea:</p> <!-- Satirical misspelling preserved -->
     <p>Will update this at some point.</p>
 
     <hr>
@@ -109,13 +109,19 @@
         // Function to make the section title flash blue when clicked
         function flashTitle(sectionId) {
             const sectionTitle = document.getElementById(sectionId);
+
+            // Remove the flash class if it already exists (to prevent flashing multiple times)
             sectionTitle.classList.remove('flash');
+
+            // Add the flash class to the title
             sectionTitle.classList.add('flash');
+
+            // Remove the flash class after the animation ends (0.5s)
             setTimeout(() => {
                 sectionTitle.classList.remove('flash');
-            }, 500);
+            }, 500); // Match the duration of the flash effect
         }
     </script>
 </body>
-</html>
 
+</html>
