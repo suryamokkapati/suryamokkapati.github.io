@@ -9,10 +9,15 @@
             font-family: "Times New Roman", serif;
             color: black;
             background-color: white;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             scroll-behavior: smooth;
             position: relative;
-            padding: 0;
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><style type="text/css">line, polyline { fill: none; stroke: #000; stroke-width: 2.5; }</style><line x1="0" y1="1.25" x2="18" y2="1.25" id="border" /><use xlink:href="#border" transform="translate(0 15.5)" /><polyline points="1.25,16.7 1.25,5.7 9.9,5.7 9.9,9.4" id="wave" /><use xlink:href="#wave" transform="rotate(180 7.75 9)" /></svg>');
+            background-repeat: repeat; /* Makes the SVG repeat */
+            background-size: 18px 18px; /* Set the size of the SVG to match the viewBox */
+            background-position: top left, top right, bottom left, bottom right; /* To position at each corner */
         }
 
         h1 {
@@ -50,90 +55,55 @@
             height: auto;
         }
 
-        .svg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .svg-border {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-        }
-
         .content {
             position: relative;
-            z-index: 1; /* Ensure content is above the SVG border */
+            z-index: 1; /* Ensures content is above the SVG */
+            padding: 20px;
         }
 
     </style>
 </head>
 <body>
-    <!-- SVG Border Container -->
-    <div class="svg-container">
-        <svg class="svg-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <style type="text/css">
-                line, polyline { fill: none; stroke: #000; stroke-width: 2.5; }
-            </style>
-            <line x1="0" y1="1.25" x2="18" y2="1.25" id="border" />
-            <use xlink:href="#border" transform="translate(0 15.5)" />
-            <polyline points="1.25,16.7 1.25,5.7 9.9,5.7 9.9,9.4" id="wave" />
-            <use xlink:href="#wave" transform="rotate(180 7.75 9)" />
-        </svg>
-    </div>
+    <a href="index.html">
+        <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
+    </a>
 
-    <div class="content">
-        <a href="index.html">
-            <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
-        </a>
+    <h1>Surya Mokkapati</h1>
+    <p>This is my website.</p>
 
-        <h1>Surya Mokkapati</h1>
-        <p>This is my website.</p>
+    <ul>
+        <li><a href="#resume" onclick="flashTitle('resume')">Resume</a></li>
+        <li><a href="#literature" onclick="flashTitle('literature')">Literature</a></li>
+        <li><a href="#music" onclick="flashTitle('music')">Music</a></li>
+        <li><a href="#thoughts" onclick="flashTitle('thoughts')">Thoughts</a></li>
+    </ul>
 
-        <ul>
-            <li><a href="#resume" onclick="flashTitle('resume')">Resume</a></li>
-            <li><a href="#literature" onclick="flashTitle('literature')">Literature</a></li>
-            <li><a href="#music" onclick="flashTitle('music')">Music</a></li>
-            <li><a href="#thoughts" onclick="flashTitle('thoughts')">Thoughts</a></li>
-        </ul>
+    <hr>
 
-        <hr>
+    <h2 id="resume">Resume</h2>
+    <p>CV - Curriicuulum Vitaea:</p>
+    <p>Will update this at some point.</p>
 
-        <h2 id="resume">Resume</h2>
-        <p>CV - Curriicuulum Vitaea:</p>
-        <p>Will update this at some point.</p>
+    <hr>
 
-        <hr>
+    <h2 id="literature">Literature</h2>
+    <p>Glorified book reports.</p>
+    <ul>
+        <li><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></li>
+        <li><a href="hamlet.html">Hamlet</a></li>
+        <li><a href="flowers_for_algernon.html">Flowers for Algernon</a></li>
+    </ul>
 
-        <h2 id="literature">Literature</h2>
-        <p>Glorified book reports.</p>
-        <ul>
-            <li><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></li>
-            <li><a href="hamlet.html">Hamlet</a></li>
-            <li><a href="flowers_for_algernon.html">Flowers for Algernon</a></li>
-        </ul>
+    <hr>
 
-        <hr>
+    <h2 id="music">Music</h2>
+    <p>Album reviews.</p>
 
-        <h2 id="music">Music</h2>
-        <p>Album reviews.</p>
+    <hr>
 
-        <hr>
-
-        <h2 id="thoughts">Thoughts</h2>
-        <p>My thoughts for better or for worse.</p>
-        <p>I will have one eventually.</p>
-    </div>
+    <h2 id="thoughts">Thoughts</h2>
+    <p>My thoughts for better or for worse.</p>
+    <p>I will have one eventually.</p>
 
     <script>
         // Function to make the section title flash blue when clicked
@@ -148,3 +118,4 @@
     </script>
 </body>
 </html>
+
