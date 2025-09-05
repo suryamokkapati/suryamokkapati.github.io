@@ -11,6 +11,7 @@
             background-color: white;
             margin: 20px;
             scroll-behavior: smooth; /* Smooth scrolling */
+            position: relative; /* Allow absolute positioning of the Chi Rho */
         }
         h1 {
             text-align: center;
@@ -34,9 +35,23 @@
             50% { color: black; }
             100% { color: blue; }
         }
+
+        /* Position the Chi Rho in the top-right corner */
+        .chi-rho {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+        }
     </style>
 </head>
 <body>
+    <!-- Chi Rho Image linked to the homepage -->
+    <a href="index.html">
+        <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/refs/heads/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
+    </a>
+
     <h1>Surya Mokkapati</h1>
     <p>This is my website.</p>
     
@@ -58,7 +73,6 @@
     <h2 id="astronomy">Literature</h2>
     <p>Glorified book reports.</p>
     <p>Updating at some point</p>
-    <!-- Add the hyperlink for Dr. Jekyll and Mr. Hyde -->
     <p><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></p>
 
     <hr>
