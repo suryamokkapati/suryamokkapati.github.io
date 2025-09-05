@@ -65,4 +65,30 @@
 
     <h2 id="philosophy">Music</h2>
     <p>Album reviews.</p>
-    <p>Will I upd
+    <p>Will I update this?</p>
+
+    <hr>
+
+    <h2 id="journals">Thoughts</h2>
+    <p>My thoughts for better or for worse.</p>
+    <p>I will have a thought eventually.</p>
+
+    <script>
+        // Function to make the section title flash blue when clicked
+        function flashTitle(sectionId) {
+            const sectionTitle = document.getElementById(sectionId);
+
+            // Remove the flash class if it already exists (to prevent flashing multiple times)
+            sectionTitle.classList.remove('flash');
+
+            // Add the flash class to the title
+            sectionTitle.classList.add('flash');
+
+            // Remove the flash class after the animation ends (0.5s)
+            setTimeout(() => {
+                sectionTitle.classList.remove('flash');
+            }, 500); // Match the duration of the flash effect
+        }
+    </script>
+</body>
+</html>
