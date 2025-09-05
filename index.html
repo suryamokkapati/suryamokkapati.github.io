@@ -12,28 +12,36 @@
             margin: 20px;
             scroll-behavior: smooth;
             position: relative;
+            padding: 0;
         }
+
         h1 {
             text-align: center;
         }
+
         a {
             color: blue;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         hr {
             border: 1px solid black;
         }
+
         .flash {
             animation: flashEffect 0.5s;
         }
+
         @keyframes flashEffect {
             0% { color: blue; }
             50% { color: black; }
             100% { color: blue; }
         }
+
         .chi-rho {
             position: absolute;
             top: 20px;
@@ -41,66 +49,91 @@
             width: 30px;
             height: auto;
         }
-        /* Styling for the SVG */
+
         .svg-container {
-            margin-top: 20px;
-            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
         }
+
+        .svg-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1; /* Ensure content is above the SVG border */
+        }
+
     </style>
 </head>
 <body>
-    <a href="index.html">
-        <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
-    </a>
-
-    <h1>Surya Mokkapati</h1>
-    <p>This is my website.</p>
-
-    <ul>
-        <li><a href="#resume" onclick="flashTitle('resume')">Resume</a></li>
-        <li><a href="#literature" onclick="flashTitle('literature')">Literature</a></li>
-        <li><a href="#music" onclick="flashTitle('music')">Music</a></li>
-        <li><a href="#thoughts" onclick="flashTitle('thoughts')">Thoughts</a></li>
-    </ul>
-
-    <hr>
-
+    <!-- SVG Border Container -->
     <div class="svg-container">
-        <!-- Your SVG code -->
-        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" stroke="black" stroke-width="5" fill="none"/>
-            <path d="M 5 5 H 95 V 95 H 5 Z" fill="none" stroke="black" stroke-width="5"/>
-            <path d="M 15 5 H 85 V 85 H 15 Z" fill="none" stroke="black" stroke-width="5"/>
-            <path d="M 25 5 H 75 V 75 H 25 Z" fill="none" stroke="black" stroke-width="5"/>
+        <svg class="svg-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+            <style type="text/css">
+                line, polyline { fill: none; stroke: #000; stroke-width: 2.5; }
+            </style>
+            <line x1="0" y1="1.25" x2="18" y2="1.25" id="border" />
+            <use xlink:href="#border" transform="translate(0 15.5)" />
+            <polyline points="1.25,16.7 1.25,5.7 9.9,5.7 9.9,9.4" id="wave" />
+            <use xlink:href="#wave" transform="rotate(180 7.75 9)" />
         </svg>
     </div>
 
-    <hr>
+    <div class="content">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
+        </a>
 
-    <h2 id="resume">Resume</h2>
-    <p>CV - Curriicuulum Vitaea:</p>
-    <p>Will update this at some point.</p>
+        <h1>Surya Mokkapati</h1>
+        <p>This is my website.</p>
 
-    <hr>
+        <ul>
+            <li><a href="#resume" onclick="flashTitle('resume')">Resume</a></li>
+            <li><a href="#literature" onclick="flashTitle('literature')">Literature</a></li>
+            <li><a href="#music" onclick="flashTitle('music')">Music</a></li>
+            <li><a href="#thoughts" onclick="flashTitle('thoughts')">Thoughts</a></li>
+        </ul>
 
-    <h2 id="literature">Literature</h2>
-    <p>Glorified book reports.</p>
-    <ul>
-        <li><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></li>
-        <li><a href="hamlet.html">Hamlet</a></li>
-        <li><a href="flowers_for_algernon.html">Flowers for Algernon</a></li>
-    </ul>
+        <hr>
 
-    <hr>
+        <h2 id="resume">Resume</h2>
+        <p>CV - Curriicuulum Vitaea:</p>
+        <p>Will update this at some point.</p>
 
-    <h2 id="music">Music</h2>
-    <p>Album reviews.</p>
+        <hr>
 
-    <hr>
+        <h2 id="literature">Literature</h2>
+        <p>Glorified book reports.</p>
+        <ul>
+            <li><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></li>
+            <li><a href="hamlet.html">Hamlet</a></li>
+            <li><a href="flowers_for_algernon.html">Flowers for Algernon</a></li>
+        </ul>
 
-    <h2 id="thoughts">Thoughts</h2>
-    <p>My thoughts for better or for worse.</p>
-    <p>I will have one eventually.</p>
+        <hr>
+
+        <h2 id="music">Music</h2>
+        <p>Album reviews.</p>
+
+        <hr>
+
+        <h2 id="thoughts">Thoughts</h2>
+        <p>My thoughts for better or for worse.</p>
+        <p>I will have one eventually.</p>
+    </div>
 
     <script>
         // Function to make the section title flash blue when clicked
