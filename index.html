@@ -35,15 +35,15 @@
         .flash-btn {
             position: fixed;
             bottom: 20px;
-            right: 20px; /* Move to the bottom right */
-            padding: 8px 16px; /* Slightly smaller size */
+            right: 20px;
+            padding: 8px 16px;
             background-color: #ff0000;
             color: white;
             border: none;
-            font-size: 14px; /* Smaller text */
+            font-size: 14px;
             cursor: pointer;
             border-radius: 5px;
-            font-family: "Times New Roman", serif; /* Times New Roman font */
+            font-family: "Times New Roman", serif;
             z-index: 1000;
         }
 
@@ -64,7 +64,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 30px; /* Adjusted smaller size */
+            width: 30px;
             height: auto;
         }
     </style>
@@ -134,6 +134,8 @@
     <button id="dontPress" class="flash-btn">Do NOT Press This Button</button>
 
     <script>
+        let isPressed = false;
+
         // Function to make the section title flash blue when clicked
         function flashTitle(sectionId) {
             const sectionTitle = document.getElementById(sectionId);
@@ -150,11 +152,20 @@
             }, 500); // Match the duration of the flash effect
         }
 
-        // Activate the strobe effect
+        // Activate/deactivate the strobe effect on button press
         document.getElementById('dontPress').addEventListener('click', function () {
-            document.body.classList.add('strobe-bg');
-            this.disabled = true;
-            this.innerText = ':(';
+            if (isPressed) {
+                // If already pressed, turn off the strobe effect
+                document.body.classList.remove('strobe-bg');
+                this.innerText = "Do NOT Press This Button";
+            } else {
+                // If not pressed, activate the strobe effect
+                document.body.classList.add('strobe-bg');
+                this.innerText = ":(";
+            }
+
+            // Toggle the pressed state
+            isPressed = !isPressed;
         });
     </script>
 </body>
