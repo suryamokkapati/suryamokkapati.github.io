@@ -11,8 +11,8 @@
             color: black;
             background-color: white;
             margin: 20px;
-            scroll-behavior: smooth; /* Smooth scrolling */
-            position: relative; /* Allow absolute positioning of the Chi Rho */
+            scroll-behavior: smooth;
+            position: relative;
         }
 
         h1 {
@@ -32,26 +32,33 @@
             border: 1px solid black;
         }
 
-        /* Flash effect for clicked headings */
-        .flash {
-            animation: flashEffect 0.5s;
+        .flash-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000;
         }
 
-        @keyframes flashEffect {
-            0% {
-                color: blue;
-            }
-
-            50% {
-                color: black;
-            }
-
-            100% {
-                color: blue;
-            }
+        /* Instant red/white/blue jumps */
+        @keyframes redWhiteBlue {
+            0% {background-color: red;}
+            33% {background-color: white;}
+            66% {background-color: blue;}
+            100% {background-color: red;}
         }
 
-        /* Position the Chi Rho in the top-right corner with smaller size */
+        .strobe-bg {
+            animation: redWhiteBlue 0.15s steps(1) infinite;
+        }
+
+        /* Chi Rho image styling */
         .chi-rho {
             position: absolute;
             top: 20px;
@@ -63,6 +70,7 @@
 </head>
 
 <body>
+
     <!-- Chi Rho Image linked to the homepage -->
     <a href="index.html">
         <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
@@ -121,6 +129,9 @@
     <p>My thoughts for better or for worse.</p>
     <p>I will have one eventually.</p>
 
+    <!-- Don't Press Me button -->
+    <button id="dontPress" class="flash-btn">Don't Press Me</button>
+
     <script>
         // Function to make the section title flash blue when clicked
         function flashTitle(sectionId) {
@@ -137,8 +148,14 @@
                 sectionTitle.classList.remove('flash');
             }, 500); // Match the duration of the flash effect
         }
+
+        // Activate the strobe effect
+        document.getElementById('dontPress').addEventListener('click', function () {
+            document.body.classList.add('strobe-bg');
+            this.disabled = true;
+            this.innerText = 'You pressed it!';
+        });
     </script>
 </body>
 
 </html>
-
