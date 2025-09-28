@@ -131,7 +131,7 @@
     <p>I will have one eventually.</p>
 
     <!-- Don't Press Me button -->
-    <button id="dontPress" class="flash-btn">Don't Press Me</button>
+    <button id="dontPress" class="flash-btn">Do NOT Press This Button</button>
 
     <script>
         // Function to make the section title flash blue when clicked
@@ -154,7 +154,7 @@
         document.getElementById('dontPress').addEventListener('click', function () {
             document.body.classList.add('strobe-bg');
             this.disabled = true;
-            this.innerText = 'You pressed it!';
+            this.innerText = ':(';
         });
     </script>
 </body>
