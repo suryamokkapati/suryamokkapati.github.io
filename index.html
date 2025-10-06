@@ -168,4 +168,66 @@
         <li><a href="https://classics.mit.edu/index.html">MIT Classics</a></li>
         <li><a href="https://shakespeare.mit.edu/">MIT Shakespeare</a></li>
         <li><a href="https://imperiumromanum.pl/en/">Imperium Romanum</a></li>
-        <li><a href="https://www.ditext.com/etexts.html">Ditext Etexts</a></li
+        <li><a href="https://www.ditext.com/etexts.html">Ditext Etexts</a></li>
+        <li><a href="http://www.free-book.co.uk/">Free Book</a></li>
+        <li><a href="https://www.earlymoderntexts.com/texts">Early Modern Texts</a></li>
+        <li><a href="https://www.perseus.tufts.edu/hopper/">Perseus Hopper</a></li>
+        <li><a href="https://www.pdfdrive.to/">PDF Drive</a></li>
+        <li><a href="https://watchdocumentaries.com/">Watch Documentaries</a></li>
+        <li><a href="https://openstax.org/">OpenStax</a></li>
+        <li><a href="https://z-library.cc/">Z Library</a></li>
+        <li><a href="https://welib.org/">WeLib</a></li>
+        <li><a href="https://libcom.org/">Libcom</a></li>
+        <li><a href="https://www.digitaluniverse.net/">Digital Universe</a></li>
+        <li><a href="http://www.calphysics.org/">Cal Physics</a></li>
+        <li><a href="https://ocastronomy.com/oc-star-spots/">OC Astronomy Star Spots</a></li>
+        <li><a href="https://ocastronomy.com/local-astronomy-groups/">OC Astronomy Groups</a></li>
+        <li><a href="https://www.vintagepens.com/">Vintage Pens</a></li>
+        <li><a href="https://www.universal-radio.com/catalog/hamhf/ts450s.html">TS-450S - Universal Radio</a></li>
+        <li><a href="https://math.ucr.edu/home/baez/books.html#physics">Baez Books</a></li>
+        <li><a href="https://sten.astronomycafe.net/">Astronomy Cafe</a></li>
+        <li><a href="https://www.opengreekandlatin.org/">Open Greek and Latin</a></li>
+    </ul>
+
+    <hr>
+
+    <script>
+        let isPressed = false;
+
+        // Function to make the section title flash blue when clicked
+        function flashTitle(sectionId) {
+            const sectionTitle = document.getElementById(sectionId);
+
+            // Remove the flash class if it already exists (to prevent flashing multiple times)
+            sectionTitle.classList.remove('flash');
+
+            // Add the flash class to the title
+            sectionTitle.classList.add('flash');
+
+            // Remove the flash class after the animation ends (0.5s)
+            setTimeout(() => {
+                sectionTitle.classList.remove('flash');
+            }, 500); // Match the duration of the flash effect
+        }
+
+        // Activate/deactivate the strobe effect on button press
+        document.getElementById('dontPress').addEventListener('click', function () {
+            if (isPressed) {
+                // If already pressed, turn off the strobe effect
+                document.body.classList.remove('strobe-bg');
+                this.innerText = "Do NOT Press This Button";
+            } else {
+                // If not pressed, activate the strobe effect
+                document.body.classList.add('strobe-bg');
+                this.innerText = ":(";
+            }
+
+            // Toggle the pressed state
+            isPressed = !isPressed;
+        });
+    </script>
+
+</body>
+
+</html>
+
