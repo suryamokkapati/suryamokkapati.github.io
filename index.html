@@ -67,6 +67,7 @@
             width: 30px;
             height: auto;
         }
+
     </style>
 </head>
 
@@ -133,41 +134,38 @@
     <!-- Don't Press Me button -->
     <button id="dontPress" class="flash-btn">Do NOT Press This Button</button>
 
-    <script>
-        let isPressed = false;
+    <hr>
 
-        // Function to make the section title flash blue when clicked
-        function flashTitle(sectionId) {
-            const sectionTitle = document.getElementById(sectionId);
-
-            // Remove the flash class if it already exists (to prevent flashing multiple times)
-            sectionTitle.classList.remove('flash');
-
-            // Add the flash class to the title
-            sectionTitle.classList.add('flash');
-
-            // Remove the flash class after the animation ends (0.5s)
-            setTimeout(() => {
-                sectionTitle.classList.remove('flash');
-            }, 500); // Match the duration of the flash effect
-        }
-
-        // Activate/deactivate the strobe effect on button press
-        document.getElementById('dontPress').addEventListener('click', function () {
-            if (isPressed) {
-                // If already pressed, turn off the strobe effect
-                document.body.classList.remove('strobe-bg');
-                this.innerText = "Do NOT Press This Button";
-            } else {
-                // If not pressed, activate the strobe effect
-                document.body.classList.add('strobe-bg');
-                this.innerText = ":(";
-            }
-
-            // Toggle the pressed state
-            isPressed = !isPressed;
-        });
-    </script>
-</body>
-
-</html>
+    <!-- Library of Alexandria Section -->
+    <h2 id="library">Library of Alexandria</h2>
+    <p>Links of interest:</p>
+    <ul>
+        <li><a href="https://fusor.net/board/">Fusor.net Board</a></li>
+        <li><a href="https://4hv.org/">4HV</a></li>
+        <li><a href="https://www.stevehv.4hv.org/">Steve HV</a></li>
+        <li><a href="https://www.lecremedelacrumb.com/">Le Creme de la Crumb</a></li>
+        <li><a href="https://stormandsky.com/stormanalysis101">Storm and Sky</a></li>
+        <li><a href="https://lcwo.net/">LCWO</a></li>
+        <li><a href="https://pulsars.nanograv.org/courses/psc-online-training/psc-training-spring23">Pulsar Online Training</a></li>
+        <li><a href="https://www.online-latin-dictionary.com/">Online Latin Dictionary</a></li>
+        <li><a href="https://billwurtz.com/notebook.html">Bill Wurtz Notebook</a></li>
+        <li><a href="https://www.mooc-list.com/">MOOC List</a></li>
+        <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
+        <li><a href="https://exoplanetarchive.ipac.caltech.edu">Exoplanet Archive</a></li>
+        <li><a href="https://nexsci.caltech.edu/">NEXSCI</a></li>
+        <li><a href="https://www.tutorialspoint.com/cobol/index.htm">COBOL Tutorials</a></li>
+        <li><a href="https://quantpie.co.uk/">QuantPie</a></li>
+        <li><a href="https://www.barnstormers.com/category-17397-Cessna--C-182.html">Barnstormers - Cessna C-182</a></li>
+        <li><a href="https://calculus.flippedmath.com/">FlippedMath Calculus</a></li>
+        <li><a href="https://www.meted.ucar.edu/education_training/lessons/817">MetEd Lessons</a></li>
+        <li><a href="https://ciechanow.ski/mechanical-watch/">Mechanical Watch</a></li>
+        <li><a href="http://www.leningrad.su/museum/">Leningrad Museum</a></li>
+        <li><a href="www.astrograv.co.uk">Astrograv</a></li>
+        <li><a href="https://www.shipscribe.com/styles/index.html">Ship Scribe</a></li>
+        <li><a href="https://digi.vatlib.it/">Digital Vat Library</a></li>
+        <li><a href="https://www.traditionalmusic.co.uk/american-traditional-chords/">American Traditional Chords</a></li>
+        <li><a href="https://reptile-database.reptarium.cz/">Reptile Database</a></li>
+        <li><a href="https://classics.mit.edu/index.html">MIT Classics</a></li>
+        <li><a href="https://shakespeare.mit.edu/">MIT Shakespeare</a></li>
+        <li><a href="https://imperiumromanum.pl/en/">Imperium Romanum</a></li>
+        <li><a href="https://www.ditext.com/etexts.html">Ditext Etexts</a></li
