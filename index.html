@@ -7,8 +7,19 @@
     <title>Surya Mokkapati</title>
     <link rel="apple-touch-icon" href="https://github.com/suryamokkapati/suryamokkapati.github.io/blob/main/suryaicon.jpg?raw=true">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+        @font-face {
+            font-family: 'Century Modern';
+            src: url('CenturyModern-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Century Modern';
+            src: url('CenturyModern-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
         
         * {
             margin: 0;
@@ -17,7 +28,7 @@
         }
 
         body {
-            font-family: 'Courier Prime', 'Courier New', monospace;
+            font-family: 'Century Modern', 'Times New Roman', serif;
             color: #000;
             background: #fff;
             line-height: 1.4;
@@ -274,26 +285,28 @@
             border-top: 1px solid #000;
         }
 
-        /* Flash button */
+        /* Flash button - BRIGHT RED WARNING */
         .flash-btn {
             position: fixed;
             bottom: 15px;
             right: 15px;
-            padding: 6px 12px;
-            background-color: #000;
+            padding: 8px 16px;
+            background-color: #FF0000;
             color: #fff;
-            border: 2px solid #000;
-            font-size: 8pt;
+            border: 3px solid #CC0000;
+            font-size: 9pt;
             cursor: pointer;
-            font-family: 'Courier Prime', monospace;
+            font-family: 'Century Modern', 'Times New Roman', serif;
+            font-weight: 700;
             z-index: 1000;
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
         }
 
         .flash-btn:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #CC0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
         }
 
         @keyframes redWhiteBlue {
