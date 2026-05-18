@@ -3,175 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Surya Mokkapati – astrophysics and philosophy.">
     <title>Surya Mokkapati</title>
-    <link rel="apple-touch-icon" href="https://github.com/suryamokkapati/suryamokkapati.github.io/blob/main/suryaicon.jpg?raw=true">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @font-face {
+            font-family: "Jacquard";
+            src: url("https://fonts.googleapis.com/css2?family=Jacquard&display=swap");
         }
+<button class="flash-btn" onclick="document.body.classList.toggle('strobe-bg')">
+DON'T PRESS
+</button>
 
         body {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 14pt;
-            color: #000;
-            background: #fff;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            font-family: "Times New Roman", serif;
+            color: black;
+            background-color: white;
+            margin: 20px;
+            scroll-behavior: smooth;
+            position: relative;
         }
 
-        /* Chi-Rho symbol */
-        .chi-rho {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            width: 25px;
-            height: auto;
-            opacity: 0.6;
-            z-index: 1000;
-        }
-
-        .chi-rho:hover {
-            opacity: 1;
-        }
-
-        /* Header - MITGAARD style */
-        header {
+        h1 {
+            font-family: "Jacquard", serif;
+            font-size: 36px; 
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        .site-title {
-            font-size: 24pt;
-            font-weight: bold;
-            color: #CC0000;
-            letter-spacing: 0.3em;
-            margin-bottom: 10px;
-        }
-
-        .contact-info {
-            font-size: 14pt;
-            color: #000;
-        }
-
-        /* Horizontal rules */
-        hr {
-            border: none;
-            border-top: 1px solid #000;
-            margin: 20px 0;
-        }
-
-        /* Section headings */
-        h2 {
-            font-size: 16pt;
-            font-weight: bold;
-            margin: 15px 0 10px 0;
-        }
-
-        h3 {
-            font-size: 14pt;
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-        }
-
-        /* Lists */
-        ul {
-            margin: 10px 0 10px 20px;
-        }
-
-        li {
-            margin: 3px 0;
-        }
-
-        /* Links */
         a {
-            color: #0000EE;
-            text-decoration: underline;
-        }
-
-        a:visited {
-            color: #551A8B;
+            color: blue;
+            text-decoration: none;
         }
 
         a:hover {
-            color: #EE0000;
+            text-decoration: underline;
         }
 
-        /* Section description */
-        .section-desc {
-            font-style: italic;
-            margin-bottom: 10px;
+        hr {
+            border: 1px solid black;
         }
 
-        /* Library of Alexandria - Boxed like Plato dialogues */
-        .library-section {
-            margin-top: 30px;
-        }
-
-        .library-title {
-            font-size: 18pt;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .library-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .library-box {
-            border: 2px solid #000;
-            padding: 15px;
-        }
-
-        .library-box h3 {
-            text-align: center;
-            border-bottom: 1px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        .library-box ul {
-            margin-left: 15px;
-        }
-
-        .full-width-box {
-            grid-column: 1 / -1;
-        }
-
-        /* Flash button - early internet aesthetic */
         .flash-btn {
             position: fixed;
-            bottom: 15px;
-            right: 15px;
-            padding: 6px 12px;
-            background-color: #FF0000;
-            color: #FFFFFF;
-            border: 2px outset #CC0000;
-            font-size: 10pt;
+            bottom: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            font-size: 14px;
             cursor: pointer;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
+            border-radius: 5px;
+            font-family: "Times New Roman", serif;
             z-index: 1000;
-            box-shadow: 2px 2px 0px #000;
-        }
-
-        .flash-btn:active {
-            border-style: inset;
-            box-shadow: inset 1px 1px 2px #000;
-        }
-
-        .flash-btn:hover {
-            background-color: #CC0000;
         }
 
         @keyframes redWhiteBlue {
@@ -185,49 +68,41 @@
             animation: redWhiteBlue 0.09s steps(1) infinite;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .library-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .site-title {
-                font-size: 18pt;
-                letter-spacing: 0.2em;
-            }
+        .chi-rho {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: auto;
         }
+
     </style>
+<link rel="apple-touch-icon" href="https://github.com/suryamokkapati/suryamokkapati.github.io/blob/main/suryaicon.jpg?raw=true">
 </head>
 
 <body>
+
     <a href="index.html">
         <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
     </a>
 
-    <button class="flash-btn" onclick="document.body.classList.toggle('strobe-bg')">
-        DON'T PRESS
-    </button>
+    <h1>Surya Mokkapati</h1>
+    <p>This is my website.</p>
 
-    <!-- Header -->
-    <header>
-        <div class="site-title">S U R Y A &nbsp; M O K K A P A T I</div>
-        <div class="contact-info">suryamokkapati@aol.com | linkedin.com/in/suryamokkapati | @mirkwood_:matrix.org</div>
-    </header>
+    <ul>
+        <li><a href ="surya.html">About Me</a></li>
+        <li><a href="#literature" onclick="flashTitle('literature')">Literature</a></li>
+        <li><a href="#music" onclick="flashTitle('music')">Music</a></li>
+        <li><a href="#thoughts" onclick="flashTitle('thoughts')">Thoughts</a></li>
+        <li><a href="library.html">Personal Library</a></li>
+        <li><a href="#library" onclick="flashTitle('library')">Library of Alexandria</a></li>
 
-    <hr>
-
-    <!-- Abstract -->
-    <p>I am an astrophysics and philosophy student. I am right-handed, and I tend to write with my paper perpendicular to me. I like to learn things.</p>
+    </ul>
 
     <hr>
 
-    <!-- Literature -->
-    <h2>Literature</h2>
-    <p class="section-desc">Glorified book reports.</p>
+    <h2 id="literature">Literature</h2>
+    <p>Glorified book reports.</p>
     <ul>
         <li><a href="jekyll_hyde.html">The Strange Case of Dr. Jekyll and Mr. Hyde</a></li>
         <li><a href="hamlet.html">Hamlet</a></li>
@@ -238,13 +113,24 @@
         <li><a href="soundfury.html">The Sound and the Fury</a></li>
         <li><a href="finneganswake.html">Finnegans Wake</a></li>
         <li><a href="mobydick.html">Moby Dick</a></li>
+
     </ul>
 
     <hr>
+<ul>
+    <h2 id="thoughts">Projects</h2>
+    <p>
+    <li><a href="https://github.com/suryamokkapati/riverrun">riverrun</a></li>
+    <li><a href="https://github.com/suryamokkapati/pulsardistance">pulsardistance</a></li>
 
-    <!-- Music -->
-    <h2>Music</h2>
-    <p class="section-desc">Album reviews.</p>
+        
+    </p>
+         </p>
+</ul>
+    <hr>
+
+    <h2 id="music">Music</h2>
+    <p>Album reviews.</p>
     <ul>
         <li><a href="kid_a.html">Kid A - Radiohead</a></li>
         <li><a href="amnesiac.html">Amnesiac - Radiohead</a></li>
@@ -262,148 +148,124 @@
         <li><a href="the_wall.html">The Wall - Pink Floyd</a></li>
         <li><a href="dark_side_of_the_moon.html">Dark Side of the Moon - Pink Floyd</a></li>
     </ul>
-
+    
     <hr>
 
-    <!-- Projects -->
-    <h2>Projects</h2>
+    <h2 id="library">Library of Alexandria</h2>
+
+<p id="links">Links of Interest</p>
     <ul>
-        <li><a href="https://github.com/suryamokkapati/riverrun">riverrun</a></li>
-        <li><a href="https://github.com/suryamokkapati/pulsardistance">pulsardistance</a></li>
+    <li><a href="https://fusor.net/board/">Fusor.net</a></li>
+    <li><a href="https://4hv.org/">4HV</a></li>
+    <li><a href="https://www.stevehv.4hv.org/">Steve's HV</a></li>
+    <li><a href="https://lcwo.net/">LCWO</a></li>
+    <li><a href="https://pulsars.nanograv.org/courses/psc-online-training/psc-training-spring23">Pulsar Search Collaboratory</a></li>
+    <li><a href="https://www.online-latin-dictionary.com/">Online Latin Dictionary</a></li>
+    <li><a href="https://billwurtz.com/notebook.html">Bill Wurtz</a></li>
+    <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
+    <li><a href="https://exoplanetarchive.ipac.caltech.edu">Exoplanet Archive</a></li>
+    <li><a href="https://nexsci.caltech.edu/">NEXSCI</a></li>
+    <li><a href="https://www.tutorialspoint.com/cobol/index.htm">COBOL Index</a></li>
+    <li><a href="https://quantpie.co.uk/">QuantPie</a></li>
+    <li><a href="https://www.barnstormers.com/category-17397-Cessna--C-182.html">Cessna C-182</a></li>
+    <li><a href="https://www.meted.ucar.edu/education_training/lessons/817">MetEd</a></li>
+    <li><a href="https://ciechanow.ski/mechanical-watch/">Mechanical Watch</a></li>
+    <li><a href="http://www.leningrad.su/museum/">Leningrad Museum</a></li>
+    <li><a href="https://www.cookingforengineers.com/">Cooking for Engineers</a></li>
+    <li><a href="https://www.lecremedelacrumb.com/">Le Creme de la Crumb</a></li>
+    <li><a href="https://www.shipscribe.com/styles/index.html">Ship Scribe</a></li>
+    <li><a href="https://digi.vatlib.it/">Digital Vatican Library</a></li>
+    <li><a href="https://www.traditionalmusic.co.uk/american-traditional-chords/">American Traditional Chords</a></li>
+    <li><a href="https://reptile-database.reptarium.cz/">Reptile Database</a></li>
+    <li><a href="https://classics.mit.edu/index.html">MIT Classics</a></li>
+    <li><a href="https://shakespeare.mit.edu/">MIT Shakespeare</a></li>
+    <li><a href="https://imperiumromanum.pl/en/">Imperium Romanum</a></li>
+    <li><a href="https://www.ditext.com/etexts.html">Ditext Etexts</a></li>
+    <li><a href="http://www.free-book.co.uk/">Free Book</a></li>
+    <li><a href="https://www.earlymoderntexts.com/texts">Early Modern Texts</a></li>
+    <li><a href="https://www.perseus.tufts.edu/hopper/">Perseus Hopper</a></li>
+    <li><a href="https://watchdocumentaries.com/">Documentaries</a></li>
+    <li><a href="https://openstax.org/">OpenStax</a></li>
+    <li><a href="https://www.digitaluniverse.net/">Digital Universe</a></li>
+    <li><a href="http://www.calphysics.org/">Cal Physics</a></li>
+    <li><a href="https://ocastronomy.com/oc-star-spots/">OC Astronomy Star Spots</a></li>
+    <li><a href="https://ocastronomy.com/local-astronomy-groups/">OC Astronomy Groups</a></li>
+    <li><a href="https://www.vintagepens.com/">Vintage Pens</a></li>
+    <li><a href="https://www.universal-radio.com/catalog/hamhf/ts450s.html">TS-450S Universal Radio</a></li>
+    <li><a href="https://math.ucr.edu/home/baez/books.html#physics">Baez Physics</a></li>
+    <li><a href="https://sten.astronomycafe.net/">Astronomy Cafe</a></li>
+    <li><a href="https://www.opengreekandlatin.org/">Open Greek and Latin</a></li>
+    <li><a href="https://www.congress.gov/crs-products">Library of Congress</a></li>
+    <li><a href="https://musicfromouterspace.com/">Music From Outer Space [Synths and more!]</a></li>
     </ul>
-
-    <hr>
-
-    <!-- Personal Library -->
-    <h2>Personal Library</h2>
+<p id="links">Playlists of Interest</p>
     <ul>
-        <li><a href="library.html">View Personal Library</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL9B24A6A9D5754E70">MIT Electrical Engineering and Computer Science</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL858478F1EC364A2C">MIT Exploring Black Holes</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61XcBw73jdcpNO-pju-mFtw">MIT Old English and Beowulf</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1">MIT Single Variable Calculus</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr">MIT Quantum Physics</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60Do91PdN978llIsvjKW0au">MIT Nuclear and Particle Physics</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61O7HkcF7UImpM0cR_L2gSw">MIT Real Analysis</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0E754696F72137EC">Harvey Mudd Real Analysis</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D">Gilbert Strang Linear Algebra</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL8T9k99OFn-x2rOXlkfXRz09Ch_t4nEX1">Rocket Propulsion Lectures</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hrkmmq57lX8BV-o-YIOFsiG">Tensors for Beginners</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0yNjaybQwdudycotA6z0DFK5DZaXWE1J">Caltech Astronomy</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLGCHvDjfDoxIlYZma9T1vHrsIJKepf4lw">The Great Courses and Other Lectures</a></li>
+    <li><a href="https://www.youtube.com/watch?v=GDNTsdtbKy8&list=PL023BCE5134243987&index=3&ab_channel=YaleCourses">Yale Ancient Greek History</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL851F45079A91C3F2">Yale Early Middle Ages</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL150326949691B199">Yale Human Behavioral Biology</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLJ9ZJ_La7QydEVzaYR9hw5uQDfUBzUmSs">WWII Lectures</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLrbDdGg7Qy8h6Nyk1cO0eWEQLCPQfrDux">Michael Sugrue - Medieval/Renaissance</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLrbDdGg7Qy8hDPo125G5RKOhjvZWLEqX1">Michael Sugrue - Nineteenth Century</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL49C7AA14331CFEF3">World Civilizations to 1500</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL2-nXVOJM8X3RIsK9hxL90wEHrFlNcukf">Mary Beard's Ancient Rome</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLErBGbWC2wSO8DCCSR3s-QZ3FoArssQYU">Mary Beard's 12 Caesars</a></li>
+    <li><a href="https://docs.google.com/document/d/1FEapxFU9XOTu_luOucf3Ai4BpPbeHVO-dIZpe0uLQ0g/edit?usp=sharing">Smay's AP Physics</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLPH7f_7ZlzxQVx5jRjbfRGEzWY_upS5K6">Schuller Quantum Theory</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic">Schuller Geometrical Anatomy of Theoretical Physics</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLmsIjFudc1l2wDQ_ekx6iLtqcWJQQvOsw">Schuller General Relativity</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53j51FG6wCbQKjBgpjKa5PX">Borcherd Algebraic Geometry</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj51HisRtNyzHX-Xyg6I3Wl2F">Borcherd Modular Forms</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V">Cornell Nonlinear Dynamics and Chaos</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLuAO-1XXEh0a4UCA-iOqPilVmiqyXTkdJ">Baez Interesting Lectures</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b">Albin Algebraic Topology</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo">Harvard Statistics 110</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLNsppmbLKJ8JRS9YDUImL8KetHiB-6CQ9">Sanskrit</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL_PmagcbWvrUwz6JQYZ0ZCpeottOKRJl3">Old Norse</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLaINFseE0hFoZSLjI1qSLieMySa5PYkWp">Middle Egyptian</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLbPcJ-1c2LSJuNkXrWx10jrFyR5GsYNNu">Old English</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLqjJkLRygqlNWlomCQr11xSttQmcF6DOw">Akkadian</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLq5ea-jR9u2puDaLoRL-nBkpwrkURbLjT">Ancient Greek</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLI76N29qybf-o5U6tvD-8VPILacttSaM3">Latin</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLZVBjNG--XIUhdcRQgblUyAsU5FgWTuuL">Tamil</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLB306DSmXL1aXdzgIt2mJkm4YfNqsOv-r">Russian</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0eu6_WptaE99jT1n1VnejcUOG_M9JZAz">Square Notation</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL12S4tO-QndAHP9-a-vLQKCee3hW3mSQP">Medieval Music Theory</a></li>
     </ul>
-
-    <hr>
-
-    <!-- Library of Alexandria Section - Boxed -->
-    <section class="library-section">
-        <h2 class="library-title">Library of Alexandria</h2>
-        
-        <div class="library-grid">
-            <!-- Links of Interest Box -->
-            <div class="library-box">
-                <h3>Links of Interest</h3>
-                <ul>
-                    <li><a href="https://fusor.net/board/">Fusor.net</a></li>
-                    <li><a href="https://4hv.org/">4HV</a></li>
-                    <li><a href="https://www.stevehv.4hv.org/">Steve's HV</a></li>
-                    <li><a href="https://lcwo.net/">LCWO</a></li>
-                    <li><a href="https://pulsars.nanograv.org/courses/psc-online-training/psc-training-spring23">Pulsar Search Collaboratory</a></li>
-                    <li><a href="https://www.online-latin-dictionary.com/">Online Latin Dictionary</a></li>
-                    <li><a href="https://billwurtz.com/notebook.html">Bill Wurtz</a></li>
-                    <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
-                    <li><a href="https://exoplanetarchive.ipac.caltech.edu">Exoplanet Archive</a></li>
-                    <li><a href="https://nexsci.caltech.edu/">NEXSCI</a></li>
-                    <li><a href="https://www.tutorialspoint.com/cobol/index.htm">COBOL Index</a></li>
-                    <li><a href="https://quantpie.co.uk/">QuantPie</a></li>
-                    <li><a href="https://www.barnstormers.com/category-17397-Cessna--C-182.html">Cessna C-182</a></li>
-                    <li><a href="https://www.meted.ucar.edu/education_training/lessons/817">MetEd</a></li>
-                    <li><a href="https://ciechanow.ski/mechanical-watch/">Mechanical Watch</a></li>
-                    <li><a href="http://www.leningrad.su/museum/">Leningrad Museum</a></li>
-                    <li><a href="https://www.cookingforengineers.com/">Cooking for Engineers</a></li>
-                    <li><a href="https://www.lecremedelacrumb.com/">Le Creme de la Crumb</a></li>
-                    <li><a href="https://www.shipscribe.com/styles/index.html">Ship Scribe</a></li>
-                    <li><a href="https://digi.vatlib.it/">Digital Vatican Library</a></li>
-                    <li><a href="https://www.traditionalmusic.co.uk/american-traditional-chords/">American Traditional Chords</a></li>
-                    <li><a href="https://reptile-database.reptarium.cz/">Reptile Database</a></li>
-                    <li><a href="https://classics.mit.edu/index.html">MIT Classics</a></li>
-                    <li><a href="https://shakespeare.mit.edu/">MIT Shakespeare</a></li>
-                    <li><a href="https://imperiumromanum.pl/en/">Imperium Romanum</a></li>
-                    <li><a href="https://www.ditext.com/etexts.html">Ditext Etexts</a></li>
-                    <li><a href="http://www.free-book.co.uk/">Free Book</a></li>
-                    <li><a href="https://www.earlymoderntexts.com/texts">Early Modern Texts</a></li>
-                    <li><a href="https://www.perseus.tufts.edu/hopper/">Perseus Hopper</a></li>
-                    <li><a href="https://watchdocumentaries.com/">Documentaries</a></li>
-                    <li><a href="https://openstax.org/">OpenStax</a></li>
-                    <li><a href="https://www.digitaluniverse.net/">Digital Universe</a></li>
-                    <li><a href="http://www.calphysics.org/">Cal Physics</a></li>
-                    <li><a href="https://ocastronomy.com/oc-star-spots/">OC Astronomy Star Spots</a></li>
-                    <li><a href="https://ocastronomy.com/local-astronomy-groups/">OC Astronomy Groups</a></li>
-                    <li><a href="https://www.vintagepens.com/">Vintage Pens</a></li>
-                    <li><a href="https://www.universal-radio.com/catalog/hamhf/ts450s.html">TS-450S Universal Radio</a></li>
-                    <li><a href="https://math.ucr.edu/home/baez/books.html#physics">Baez Physics</a></li>
-                    <li><a href="https://sten.astronomycafe.net/">Astronomy Cafe</a></li>
-                    <li><a href="https://www.opengreekandlatin.org/">Open Greek and Latin</a></li>
-                    <li><a href="https://www.congress.gov/crs-products">Library of Congress</a></li>
-                    <li><a href="https://musicfromouterspace.com/">Music From Outer Space [Synths and more!]</a></li>
-                </ul>
-            </div>
-
-            <!-- Playlists of Interest Box -->
-            <div class="library-box">
-                <h3>Playlists of Interest</h3>
-                <ul>
-                    <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL9B24A6A9D5754E70">MIT Electrical Engineering and Computer Science</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL858478F1EC364A2C">MIT Exploring Black Holes</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61XcBw73jdcpNO-pju-mFtw">MIT Old English and Beowulf</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1">MIT Single Variable Calculus</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr">MIT Quantum Physics</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60Do91PdN978llIsvjKW0au">MIT Nuclear and Particle Physics</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61O7HkcF7UImpM0cR_L2gSw">MIT Real Analysis</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL0E754696F72137EC">Harvey Mudd Real Analysis</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D">Gilbert Strang Linear Algebra</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL8T9k99OFn-x2rOXlkfXRz09Ch_t4nEX1">Rocket Propulsion Lectures</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLJHszsWbB6hrkmmq57lX8BV-o-YIOFsiG">Tensors for Beginners</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL0yNjaybQwdudycotA6z0DFK5DZaXWE1J">Caltech Astronomy</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLGCHvDjfDoxIlYZma9T1vHrsIJKepf4lw">The Great Courses and Other Lectures</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=GDNTsdtbKy8&list=PL023BCE5134243987&index=3&ab_channel=YaleCourses">Yale Ancient Greek History</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL851F45079A91C3F2">Yale Early Middle Ages</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL150326949691B199">Yale Human Behavioral Biology</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLJ9ZJ_La7QydEVzaYR9hw5uQDfUBzUmSs">WWII Lectures</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLrbDdGg7Qy8h6Nyk1cO0eWEQLCPQfrDux">Michael Sugrue - Medieval/Renaissance</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLrbDdGg7Qy8hDPo125G5RKOhjvZWLEqX1">Michael Sugrue - Nineteenth Century</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL49C7AA14331CFEF3">World Civilizations to 1500</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL2-nXVOJM8X3RIsK9hxL90wEHrFlNcukf">Mary Beard's Ancient Rome</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLErBGbWC2wSO8DCCSR3s-QZ3FoArssQYU">Mary Beard's 12 Caesars</a></li>
-                    <li><a href="https://docs.google.com/document/d/1FEapxFU9XOTu_luOucf3Ai4BpPbeHVO-dIZpe0uLQ0g/edit?usp=sharing">Smay's AP Physics</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLPH7f_7ZlzxQVx5jRjbfRGEzWY_upS5K6">Schuller Quantum Theory</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic">Schuller Geometrical Anatomy of Theoretical Physics</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLmsIjFudc1l2wDQ_ekx6iLtqcWJQQvOsw">Schuller General Relativity</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53j51FG6wCbQKjBgpjKa5PX">Borcherd Algebraic Geometry</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj51HisRtNyzHX-Xyg6I3Wl2F">Borcherd Modular Forms</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V">Cornell Nonlinear Dynamics and Chaos</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLuAO-1XXEh0a4UCA-iOqPilVmiqyXTkdJ">Baez Interesting Lectures</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b">Albin Algebraic Topology</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo">Harvard Statistics 110</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLNsppmbLKJ8JRS9YDUImL8KetHiB-6CQ9">Sanskrit</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL_PmagcbWvrUwz6JQYZ0ZCpeottOKRJl3">Old Norse</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLaINFseE0hFoZSLjI1qSLieMySa5PYkWp">Middle Egyptian</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLbPcJ-1c2LSJuNkXrWx10jrFyR5GsYNNu">Old English</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLqjJkLRygqlNWlomCQr11xSttQmcF6DOw">Akkadian</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLq5ea-jR9u2puDaLoRL-nBkpwrkURbLjT">Ancient Greek</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLI76N29qybf-o5U6tvD-8VPILacttSaM3">Latin</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLZVBjNG--XIUhdcRQgblUyAsU5FgWTuuL">Tamil</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLB306DSmXL1aXdzgIt2mJkm4YfNqsOv-r">Russian</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL0eu6_WptaE99jT1n1VnejcUOG_M9JZAz">Square Notation</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PL12S4tO-QndAHP9-a-vLQKCee3hW3mSQP">Medieval Music Theory</a></li>
-                </ul>
-            </div>
-
-            <!-- Books of Interest Box (full width) -->
-            <div class="library-box full-width-box">
-                <h3>Books of Interest</h3>
-                <ul>
-                    <li><a href="https://www.gutenberg.org/files/41617/41617-h/41617-h.htm#page508">A Complete Guide to Heraldry - Arthur Charles Fox-Davies</a></li>
-                    <li><a href="https://www.gutenberg.org/files/2489/2489-h/2489-h.htm">Moby Dick - Herman Melville</a></li>
-                    <li><a href="https://viscomi.sites.oasis.unc.edu/viscomi/coursepack/wordsworth/Wordsworth-Prelude.pdf">The Prelude - William Wordsworth</a></li>
-                    <li><a href="https://www.gutenberg.org/files/608/608-h/608-h.htm">Areopagitica - John Milton</a></li>
-                    <li><a href="https://jamesenge.com/Saxo.StoryOfAmleth.pdf">The Story of Amleth - Saxo Grammaticus</a></li>
-                    <li><a href="https://www.gutenberg.org/cache/epub/64922/pg64922-images.html">Pyrotechnics: The History and Art of Firework Making - A. St. H. Brock</a></li>
-                    <li><a href="https://www.gutenberg.org/files/14591/14591-h/14591-h.htm">Faust - Goethe</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+<p id="links">Books of Interest</p>
+    <ul>
+        <li><a href="https://www.gutenberg.org/files/41617/41617-h/41617-h.htm#page508">A Complete Guide to Heraldry - Arthur Charles Fox-Davies</a></li>
+        <li><a href="https://www.gutenberg.org/files/2489/2489-h/2489-h.htm">Moby Dick - Herman Melville</a></li>
+        <li><a href="https://viscomi.sites.oasis.unc.edu/viscomi/coursepack/wordsworth/Wordsworth-Prelude.pdf">The Prelude - William Wordsworth</a></li>
+        <li><a href="https://www.gutenberg.org/files/608/608-h/608-h.htm">Areopagitica - John Milton</a></li>
+        <li><a href="https://jamesenge.com/Saxo.StoryOfAmleth.pdf">The Story of Amleth - Saxo Grammaticus</a></li>
+        <li><a href="https://www.gutenberg.org/cache/epub/64922/pg64922-images.html">Pyrotechnics: The History and Art of Firework Making - A. St. H. Brock</a></li>
+        <li><a href="https://www.gutenberg.org/files/14591/14591-h/14591-h.htm">Faust - Goethe</a></li>
+    </ul>
+<br>
+    <p>
+      .--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
+:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
+'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `  .--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
+:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
+'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `  .--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
+:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
+'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
+</p>
 </body>
 
 </html>
