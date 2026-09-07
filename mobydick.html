@@ -1,81 +1,594 @@
-@@ -1,80 +0,0 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moby Dick</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moby Dick — Notes</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: #111;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    body {
+        padding: 14px 18px 60px;
+        font-size: 16px;
+        line-height: 1.08;
+    }
+
+    .diff {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 15px;
+        color: #111;
+        margin-bottom: 3px;
+    }
+
+    header {
+        position: relative;
+        min-height: 62px;
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 29px;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    .mark {
+        position: absolute;
+        right: 2px;
+        top: -10px;
+        font-size: 34px;
+        line-height: 1;
+    }
+
+    .intro {
+        margin-top: 2px;
+        margin-bottom: 28px;
+    }
+
+    h2 {
+        font-size: 17px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    .section {
+        margin-top: 22px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 7px 0 20px;
+    }
+
+    th, td {
+        border: 1px solid #222;
+        padding: 5px 7px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    .schedule th:first-child,
+    .schedule td:first-child {
+        width: 18%;
+    }
+
+    .schedule th:nth-child(2),
+    .schedule td:nth-child(2) {
+        width: 32%;
+    }
+
+    .schedule th:nth-child(3),
+    .schedule td:nth-child(3) {
+        width: 50%;
+    }
+
+    .quotes {
+        table-layout: fixed;
+    }
+
+    .quotes th:nth-child(1),
+    .quotes td:nth-child(1) {
+        width: 62%;
+    }
+
+    .quotes th:nth-child(2),
+    .quotes td:nth-child(2) {
+        width: 25%;
+    }
+
+    .quotes th:nth-child(3),
+    .quotes td:nth-child(3) {
+        width: 13%;
+    }
+
+    .quotes td:first-child {
+        font-style: normal;
+    }
+
+    .note {
+        margin: 10px 0;
+    }
+
+    .question {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 17px;
+        margin: 22px 0 9px;
+    }
+
+    .quote-block {
+        margin: 8px 0 16px;
+        padding-left: 18px;
+        border-left: 2px solid #222;
+    }
+
+    .quote-source {
+        margin-top: 4px;
+    }
+
+    .subsection {
+        margin-top: 25px;
+    }
+
+    .subsection h3 {
+        font-size: 17px;
+        margin: 0 0 8px;
+    }
+
+    ul {
+        margin: 0 0 18px 24px;
+        padding: 0;
+    }
+
+    li {
+        margin: 4px 0;
+    }
+
+    .chapter-note {
+        font-weight: bold;
+        margin-top: 12px;
+    }
+
+    .cetology {
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
         body {
-            font-family: "Times New Roman", serif;
-            color: black;
-            background-color: white;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        p {
-            text-align: left;
+            font-size: 15px;
         }
 
-   
-        .chi-rho {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 30px; 
-            height: auto;
+        .quotes {
+            font-size: 14px;
         }
-    </style>
+
+        .quotes th:nth-child(1),
+        .quotes td:nth-child(1) {
+            width: 58%;
+        }
+
+        .quotes th:nth-child(2),
+        .quotes td:nth-child(2) {
+            width: 25%;
+        }
+
+        .quotes th:nth-child(3),
+        .quotes td:nth-child(3) {
+            width: 17%;
+        }
+    }
+</style>
 </head>
+
 <body>
-    <!-- Chi Rho Image linked to the homepage -->
-    <a href="index.html">
-        <img src="https://raw.githubusercontent.com/myrkwood137/suryamokkapati/main/chi_rho.png" alt="Chi Rho" class="chi-rho">
-    </a>
 
+<div class="diff">@@ -1,80 +0,0 @@</div>
+
+<header>
     <h1>Moby Dick</h1>
-    <p> Very long book, so I will be doing a chapter by chapter review as I read it. 
-    </p>
-    <br>
-    <p>
-<b>Chapter 1: Loomings.</b> <br>
-      Call me Ishmael. Hard opening line, followed by multiple pages of philosophical lollygaggery. I get what people say now when I am told that Melville has the most beautiful prose in the English language. <br>
-      I had to do a <i>lot</i> of googling to get historical context for some of the named locations and terms, worth it. There was a pretty funny joke in the section regarding the fresh air depending on the direction. <br> 
-        There was some truly beautiful phrasing and sentences in this chapter, here are a few. <br> <br>
-      "With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship." <br> <br>
-      "Let the most absent-minded of men be plunged in his deepest reveries—stand that man on his legs, set his feet a-going, and he will infallibly lead you to water, if water there be in all that region. <br> 
-      Should you ever be athirst in the great American desert, try this experiment, if your caravan happen to be supplied with a metaphysical professor." <br <br>
-      Were the Niagara but a cataract of sand, would you travel your thousand miles to see it?" <br> <br>
-      "And still deeper the meaning of that story of Narcissus, who becuase hec ould not grasp the tormenting, mild image he saw in the fountain, plunged into it and was drowned. But that same image, we ourselves <br>
-      see in all rivers and oceans. It is the image of the ungraspable phantom of life; and this is the key to it all." <br> <br>
-     "No, when I go to sea, I go as a simple sailor, right before the mast, plumb down into the forecastle, aloft the to the royal mast-head."<br> <br>
-      <b>
-          "Grand Contested Election for the Presidency of the United States" <br>
-          "WHALING VOYAGE BY ONE ISHMAEL" <br>
-          "BLOODY BATTLE IN AFFGHANISTAN"
-      </b>
-        <br>
-        <br>
-        <b>Chapter 2: The Carpet-Bag.</b> <br>
-        Such dreary streets! I now realize that there are levels to this. The dogged stubborness to go on a Nantucket craft, for there was the honour and history, as opposed to "better" modern alternatives is one <br>
-        that appeals to many. I am glad I understood the line "The Tyre of this Carthage," which I would not have if I hadn't watched that documentary on the origins of Carthage just a few days before. There is a <br>
-        spirit to Nantucket that isn't there in New Bedford, brought if only by its history of whaling. I was a big fan of the mental gymnastics and rational irrationality that Ishmael went through to pick somewhere to <br>
-        lodge for the night, as well as the huge Euryclydon analogy and how the wind is treacherous to he who is outside but pleasant to the one who is behind the window in the warmth. Masterclass of prose. <br> <br>
+    <div class="mark">⚔</div>
+</header>
 
-        <b>Chapter 3: The Spouter-Inn.</b> <br>
-        Description is vivid. I find the oil painting the most interesting out of all in the chapter. The vague descriptions and aging characteristics masking the original message is something very intriguing to the mind. <br>
-        The ideology through which the viewer were to look at it would shape and mould their understanding of the "portentous black mass" in the center. In fact, I doubt I can trust Ishmael as a narrater, for he submitted <br>
-        to it being the leviathan, but he is going to Nantucket for nothing order than whaling. Then again, it is a whaling inn, so that would lend itself to the painting being that of a whale. Very interesting to think <br>
-        on how our understanding of the world prior affects our understanding of the world now. <br> <br> 
-        Of course I also loved the little bit of the bartender being named Jonah.<br>
-        "I began to feel suspicious at this dark-complexioned harpooner" was an interesting line to read. From context he's probably from some native tribe, I doubt he would be Black or Indian(real Indian that is). 
-        <br> A bar shaped like a whale's mouth is pretty cool.
-                                                                                                                                                                                                                                
-            
+<p class="intro">Very long book, so I will be doing a chapter by chapter review as I read it.</p>
 
-    </p>
-    
+<section>
+    <h2>Reading Schedule</h2>
+
+    <table class="schedule">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Target</th>
+                <th>Reality</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>08/08/2026</td><td>Chapter 5</td><td>Chapter 5</td></tr>
+            <tr><td>08/09/2026</td><td>Chapter 10</td><td>Chapter 15</td></tr>
+            <tr><td>08/10/2026</td><td>Chapter 15</td><td>Chapter 26</td></tr>
+            <tr><td>08/11/2026</td><td>Chapter 20</td><td>Chapter 31</td></tr>
+            <tr><td>08/12/2026</td><td>Chapter 25</td><td>Chapter 39</td></tr>
+            <tr><td>08/13/2026</td><td>Chapter 30</td><td>Chapter 45</td></tr>
+            <tr><td>08/14/2026</td><td>Chapter 35</td><td>Chapter 50</td></tr>
+            <tr><td>08/15/2026</td><td>Chapter 40</td><td>Chapter 55</td></tr>
+            <tr><td>08/16/2026</td><td>Chapter 45</td><td>Chapter 60</td></tr>
+            <tr><td>08/17/2026</td><td>Chapter 50</td><td>Chapter 65</td></tr>
+            <tr><td>08/18/2026</td><td>Chapter 55</td><td>Chapter 70</td></tr>
+            <tr><td>08/19/2026</td><td>Chapter 60</td><td>Chapter 75</td></tr>
+            <tr><td>08/20/2026</td><td>Chapter 65</td><td>Chapter 80</td></tr>
+            <tr><td>08/21/2026</td><td>Chapter 70</td><td>Chapter 85</td></tr>
+            <tr><td>08/22/2026</td><td>Chapter 75</td><td>Chapter 99</td></tr>
+            <tr><td>08/23/2026</td><td>Chapter 80</td><td>Chapter 104</td></tr>
+            <tr><td>08/24/2026</td><td>Chapter 85</td><td>Chapter 124</td></tr>
+            <tr><td>08/25/2026</td><td>Chapter 90</td><td>Chapter 132</td></tr>
+            <tr><td>08/26/2026</td><td>Chapter 95</td><td>Chapter 135 + Epilogue</td></tr>
+            <tr><td>08/27/2026</td><td>Chapter 100</td><td>Chapter</td></tr>
+            <tr><td>08/28/2026</td><td>Chapter 105</td><td>Chapter</td></tr>
+            <tr><td>08/29/2026</td><td>Chapter 110</td><td>Chapter</td></tr>
+            <tr><td>08/30/2026</td><td>Chapter 115</td><td>Chapter</td></tr>
+            <tr><td>08/31/2026</td><td>Chapter 120</td><td>Chapter</td></tr>
+            <tr><td>09/01/2026</td><td>Chapter 125</td><td>Chapter</td></tr>
+            <tr><td>09/02/2026</td><td>Chapter 130</td><td>Chapter</td></tr>
+            <tr><td>09/03/2026</td><td>Chapter 135 + Epilogue</td><td>Chapter</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <p class="note">page 105 the sound and the fury</p>
+    <p class="note">mention the cologne cathedral unfinished, it is finished now</p>
+</section>
+
+<section class="section">
+    <div class="section-title">Quotations</div>
+
+    <table class="quotes">
+        <thead>
+            <tr>
+                <th>Quotation</th>
+                <th>Speaker / Context</th>
+                <th>Chapter / Page</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yes, the world’s a ship on its passage out, and not a voyage complete; and the pulpit is its prow.</td>
+                <td>Ishmael</td>
+                <td>Chapter 8 | Page 30</td>
+            </tr>
+            <tr>
+                <td>But that was certainly very coolly done by him, and every one knows that in most people’s estimation, to do anything coolly is to do it genteelly.</td>
+                <td>Ishmael, regarding Queequeg skewering raw steaks with his harpoon at the table</td>
+                <td>Chapter 5 | Page 23</td>
+            </tr>
+            <tr>
+                <td>Better sleep with a sober cannibal than a drunken Christian.</td>
+                <td>Ishmael, regarding Queequeg</td>
+                <td>Chapter 3 | Page 13</td>
+            </tr>
+            <tr>
+                <td>It maketh a marvellous difference, whether thou lookest out at it from a glass window where the frost is all on the outside, or whether thou observest it from that sashless window, where the frost is o both sides, and of which the wight Death is the only glazier.</td>
+                <td>Ishmael, quoting “an old writer” regarding the “tempestuous wind called Euroclydon.”</td>
+                <td>Chapter 2 | Page 7</td>
+            </tr>
+            <tr>
+                <td>I love to sail forbidden seas, and land on barbarous coasts.</td>
+                <td>Ishmael</td>
+                <td>Chapter 1 | Page 4</td>
+            </tr>
+            <tr>
+                <td>No, when I go to sea, I go as a simple sailor, right before the mast, plumb down into the forecastle, aloft there to the royal masthead.</td>
+                <td>Ishmael</td>
+                <td>Chapter 1 | Page 3</td>
+            </tr>
+            <tr>
+                <td>He thinks that a ship made by men will carry him into countries where God does not reign, but only the Captains of this earth.</td>
+                <td>Father Mapple, regarding Jonah</td>
+                <td>Chapter 9 | Page 31</td>
+            </tr>
+            <tr>
+                <td>Queequeg was George Washington cannibalistically developed.</td>
+                <td>Ishmael</td>
+                <td>Chapter 10 | Page 37</td>
+            </tr>
+            <tr>
+                <td>For there is no quality in this world that is not what it is merely by contrast. Nothing exists in itself.</td>
+                <td>Ishmael, on the feeling of warmth with his nose out of the blanket.</td>
+                <td>Chapter 11 | Page 40</td>
+            </tr>
+            <tr>
+                <td>How I snuffed that Tartar air!- how I spurned that turnpike earth!-that common highway all over dented with the marks of slavish heels and hoofs; and turned me to admire the magnanimity of the sea which will permit no records.</td>
+                <td>Ishmael</td>
+                <td>Chapter 13 | Page 44</td>
+            </tr>
+            <tr>
+                <td>For years he knows not the land; so that when he comes to it at last, it smells like another world, more strangely than the moon would to an Earthsman.</td>
+                <td>Ishmael, regarding Nantucketer Red Men</td>
+                <td>Chapter 14 | Page 47</td>
+            </tr>
+            <tr>
+                <td>Glimpses do ye seem to see of that mortally intolerable truth; that all deep, earnest thinking is but the intrepid effort of the soul to keep the open independence of her sea; while the wildest winds of heaven and earth conspire to cast her on the treacherous, slavish foe!</td>
+                <td>Ishmael, regarding Bulkington</td>
+                <td>Chapter 23 | Page 78</td>
+            </tr>
+            <tr>
+                <td>So, better is it to perish in that howling infinite, than be ingloriously dashed upon the lee, even if that were safety!</td>
+                <td>Ishmael</td>
+                <td>Chapter 23 | Page 78</td>
+            </tr>
+            <tr>
+                <td>Terrors of the terrible! is all this agony so vain? Take heart, take heart, O Bulkington! Bear thee grimly, demigod! Up from the spray of thy ocean-perishing- straight up, leaps thy apotheosis!</td>
+                <td>Ishmael, regarding Bulkington</td>
+                <td>Chapter 23 | Page 78</td>
+            </tr>
+            <tr>
+                <td>Old age is always wakeful; as if, the longer linked with life, the less man has to do with aught that looks like death.</td>
+                <td>Ishmael, regarding Ahab</td>
+                <td>Chapter 28 | Page 91</td>
+            </tr>
+            <tr>
+                <td>Think not, is my eleventh commandment; an sleep when you can, is my twelfth.</td>
+                <td>Stubb</td>
+                <td>Chapter 29 | Page 93</td>
+            </tr>
+            <tr>
+                <td>For a Khan of the plank, and a king of the sea, and a great lord of Leviathans was Ahab.</td>
+                <td>Ishmael, regarding Ahab</td>
+                <td>Chapter 29 | Page 93</td>
+            </tr>
+            <tr>
+                <td>Who has but once dined his friends, has tasted what it is to be Caesar.</td>
+                <td>Ishmael, regarding the phenomenon of dominion over guests at dinner</td>
+                <td>Chapter 34 | Page 109</td>
+            </tr>
+            <tr>
+                <td>But I omit them as altogether obsolete; and can hardly help suspecting them for mere sounds, full of Leviathanism, but signifying nothing.</td>
+                <td>Ishmael, regarding the number of infinite names for finite whales</td>
+                <td>Chapter 32 | Page 105</td>
+            </tr>
+            <tr>
+                <td>For what he ate did not so much relieve his hunger, as keep it immortal in him.</td>
+                <td>Ishmael, regarding Flask</td>
+                <td>Chapter 34 | Page 110</td>
+            </tr>
+            <tr>
+                <td>wilt thou not chase the white whale? art not game for Moby Dick?</td>
+                <td>Ahab, to a nonresponsive Mr. Starbuck</td>
+                <td>Chapter 36 | Page 119</td>
+            </tr>
+            <tr>
+                <td>I know not all that may be coming, but be it what it will, I’ll go to it laughing.</td>
+                <td>Stubb</td>
+                <td>Chapter 39 | Page 125</td>
+            </tr>
+            <tr>
+                <td>For as this appalling ocean surrounds the verdant land, so in teh soul of man there lies one insular Tahiti, full of peace and joy, but encompassed by all the horrors of the half-known life. God keep thee! Push not off from that isle, thou canst never return!</td>
+                <td>Ishmael</td>
+                <td>Chapter 58 | Page 205</td>
+            </tr>
+            <tr>
+                <td>Are you a believer in ghosts, my friend? There are other ghosts than the Cock-Lane one, and far deeper men than Doctor Johnson who believe in them.</td>
+                <td></td>
+                <td>Chapter 69</td>
+            </tr>
+            <tr>
+                <td>For, d’ye see, rainbows do not visit the clear air; they only irradiate vapour.</td>
+                <td>Ishmael</td>
+                <td>Chapter 85 | Page 276</td>
+            </tr>
+            <tr>
+                <td>Thus we see how that the spine of even the hugest of living things tapers off at last into simple child’s play.</td>
+                <td>Ishmael</td>
+                <td>Chapter 103 | Page 335</td>
+            </tr>
+            <tr>
+                <td>Seat thyself sultanically among the moons of Saturn, and take high abstracted man alone, and he seems a wonder, a grandeur, and a woe. But from the same point take mankind in mass, and for the most apart they seem a mob of unnecessary duplicates, both contemporary and hereditary.</td>
+                <td>Ishmael</td>
+                <td>Chapter 107 | Page 343</td>
+            </tr>
+            <tr>
+                <td>Ego non baptizo te in nomine patris, sed in nomine diaboli!</td>
+                <td>Ahab</td>
+                <td>Chapter 113 | Page 359</td>
+            </tr>
+            <tr>
+                <td>I'll try a pagan friend since Christian kindness has proved but hollow courtesy.</td>
+                <td>Ishmael</td>
+                <td>Chapter 10</td>
+            </tr>
+            <tr>
+                <td>Best, therefore, withhold any amazement at the strangely gallied whales before us, for there is no folly of the beasts of the earth which is not infinitely outdone by the madness of men.</td>
+                <td>Ishmael</td>
+                <td>Chapter 87 | Page 284</td>
+            </tr>
+            <tr>
+                <td>But even so, amid the tornadoes Atlantic of my being, do I myself still for ever centrally disport in mute calm; and while ponderous planets of unwaning woe revolve round me, deep down and deep inland there I still bathe me in eternal mildness of joy.</td>
+                <td>Ishmael</td>
+                <td>Chapter 87 | Page 288</td>
+            </tr>
+            <tr>
+                <td>“Why,let me see; yes, you may as well tell him now that-that-in fact, tell him I’ve diddled him, and (aside to himself) perhaps somebody else.”</td>
+                <td>Stubb</td>
+                <td>Chapter 91 | Page 301</td>
+            </tr>
+            <tr>
+                <td>“Thank him heartily; but tell him it’s against my principles to drink with the man I’ve diddled.”</td>
+                <td>Stubb</td>
+                <td>Chapter 91 | Page 301</td>
+            </tr>
+            <tr>
+                <td>Hereby perhaps Stubb indirectly hinted, that though man loved his fellow, yet man is a money-making animal, which propensity too often interferes with his benevolence.</td>
+                <td>Ishmael, regarding Stubb</td>
+                <td>Chapter 93 | Page 306</td>
+            </tr>
+            <tr>
+                <td>Squeeze! squeeze! squeeze! all the morning long; I squeezed that sperm till I myself almost melted into it; I squeezed that sperm till a strange sort of insanity came over me; and I found myself unwittingly squeezing my co-laborers’ hands in it, mistaking their hands for the gentle globules. Such an abounding, affectionate, friendly, loving feeling did this avocation beget; that at last I was continually squeezing their hands, and looking up into their eyes sentimentally; as much as to say,—Oh, my dear fellow beings, why should we longer cherish any social acerbities, or know the slightest ill-humor or envy! Come; let us squeeze hands all round; nay, let us all squeeze ourselves into each other; let us squeeze ourselves universally into the very milk and sperm of kindness.</td>
+                <td>Ishmael</td>
+                <td>Chapter 94 | Page 308</td>
+            </tr>
+            <tr>
+                <td>I do deem it now a most meaning thing, that that old Greek, Prometheus, who made men, they say, should have been a blacksmith, and animated them with fire; for what’s made in fire must properly belong to fire; and so hell’s probable. How the soot flies! This must be the remainder the Greek made the Africans of.</td>
+                <td>Ahab</td>
+                <td>Chapter 108 | Page 346</td>
+            </tr>
+            <tr>
+                <td>For whatever is truly wondrous and fearful in man, never yet was put into words or books.</td>
+                <td>Ishmael, regarding the look in Queequeg’s eyes</td>
+                <td>Chapter 110 | Page 351</td>
+            </tr>
+            <tr>
+                <td>Top-heavy was the ship as a dinnerless student with all Aristotle in his head.</td>
+                <td>Ishmael</td>
+                <td>Chapter 110 | Page 351</td>
+            </tr>
+            <tr>
+                <td>Oh, thou dark Hindoo half of nature, who of dronwed bones hast builded thy separate throne somewhere in the heart of theseunverdured seas; thou art an infidel, thou queen, and too truly speakest to me in the wide-slaughtering Typhoon, and the hushed burial of its after calm.</td>
+                <td>Ahab</td>
+                <td>Chapter 116 | Page 364</td>
+            </tr>
+            <tr>
+                <td>Oh, trebly hooped and welded hip of power! Oh, high aspiring, rainbowed jet!—that one strivest, this one jettest all in vain! In vain, oh whale, dost thou seek intercedings with yon all-quickening sun, that only calls forth life, but gives it not again. Yet dost thou, darker half, rock me with a prouder, if a darker faith. All thy unnamable imminglings float beneath me here; I am buoyed by breaths of once living things, exhaled as air, but water now.</td>
+                <td>Ahab, regarding the dying whale</td>
+                <td>Chapter 116 | Page 364</td>
+            </tr>
+            <tr>
+                <td>no longer will I guide my earthly way by thee; the level ship’s compass, and the level dead-reckoning, by log and by line; these shall conduct me, and show me my place on the sea.</td>
+                <td>Ahab, dashing the quadrant</td>
+                <td>Chapter 116 | Page 364</td>
+            </tr>
+            <tr>
+                <td>Warmest climes but nurse the cruellest fangs; the tiger of Bengal crouches in spiced groves of ceaseless verdure.</td>
+                <td>Ishmael</td>
+                <td>Chapter 119 | Page 367</td>
+            </tr>
+            <tr>
+                <td>In the midst of the personified impersonal, a personality stands here.</td>
+                <td>Ahab</td>
+                <td>Chapter 119 | Page 371</td>
+            </tr>
+            <tr>
+                <td>Oh, thou clear spirit, of thy fire thou madest me, and like a true child of fire, I breathe it back to thee.</td>
+                <td>Ahab</td>
+                <td>Chapter 119 | Page 371</td>
+            </tr>
+            <tr>
+                <td>I leap with thee; I burn with thee; would fain be welded with thee; defyingly I worship thee!</td>
+                <td>Ahab to the Fire</td>
+                <td>Chapter 119 | Page 371</td>
+            </tr>
+            <tr>
+                <td>I turn my body from the sun.</td>
+                <td>Ahab</td>
+                <td>Chapter 135 | Page 418</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="section">
+    <div class="question">Is there a predetermined Essence in the world or is it a random indifference?</div>
+
+    <div class="quote-block">
+        “As with all sinners among men, the sin of this son of Amitta iwas in his wilful disobedience of the command of God - never mind now what that command was, or how conveyed - which he found a hard command. But all the things that God would have us do are hard for us to do - remember that - and hence, He oftener commands us than endeavours to persuade. And if we obey God, we must disobey ourselves; and it is in thi sdisobeying ourselves, wherein the hardness of obeying God consists.” pg 31
+    </div>
+
+    <div class="question">If there is an Essence, is it God or is it Fate?</div>
+
+    <div class="question">The quality of man is not subject to division by religion, race, or creed</div>
+
+    <p>The whole of chapter 23 captures the essence of the novel</p>
+
+    <p>I was wrong: it is in chapter 36: All visible objects, man, are but as pasteboard masks. But in each event—in the living act, the undoubted deed—there, some unknown but still reasoning thing puts forth the mouldings of its features from behind the unreasoning mask. If man will strike, strike through the mask! How can the prisoner reach outside except by thrusting through the wall? To me, the white whale is that wall, shoved near to me. Sometimes I think there’s naught beyond. But ’tis enough. He tasks me; he heaps me; I see in him outrageous strength, with an inscrutable malice sinewing it. That inscrutable thing is chiefly what I hate; and be the white whale agent, or be the white whale principal, I will wreak that hate upon him. Talk not to me of blasphemy, man; I’d strike the sun if it insulted me. For could the sun do that, then could I do the other; since there is ever a sort of fair play herein, jealousy presiding over all creations. But not my master, man, is even that fair play. Who’s over me? Truth hath no confines. Take off thine eye! more intolerable than fiends’ glarings is a doltish stare! Page 120.</p>
+
+    <p class="quote-block">“Speak, thou vast and venerable head,” muttered Ahab, “which, though ungarnished with a beard, yet here and there lookest hoary with mosses; speak, mighty head, and tell us the secret thing that is in thee. Of all divers, thou hast dived the deepest. That head upon which the upper sun now gleams, has moved amid this world’s foundations. Where unrecorded names and navies rust, and untold hopes and anchors rot; where in her murderous hold this frigate earth is ballasted with bones of millions of the drowned; there, in that awful water-land, there was thy most familiar home. Thou hast been where bell or diver never went; hast slept by many a sailor’s side, where sleepless mothers would give their lives to lay them down. Thou saw’st the locked lovers when leaping from their flaming ship; heart to heart they sank beneath the exulting wave; true to each other, when heaven seemed false to them. Thou saw’st the murdered mate when tossed by pirates from the midnight deck; for hours he fell into the deeper midnight of the insatiate maw; and his murderers still sailed on unharmed—while swift lightnings shivered the neighboring ship that would have borne a righteous husband to outstretched, longing arms. O head! thou hast seen enough to split the planets and make an infidel of Abraham, and not one syllable is thine!” Chapter 70 Ahab</p>
+
+    <div class="subsection">
+        <div class="question">Fast-Fish / Loose-Fish</div>
+
+        <p>Is it not a saying in every one’s mouth, Possession is half of the law: that is, regardless of how the thing came into possession? But often possession is the whole of the law. What are the sinews and souls of Russian serfs and Republican slaves but Fast-Fish, whereof possession is the whole of the law? What to the rapacious landlord is the widow’s last mite but a Fast-Fish? What is yonder undetected villain’s marble mansion with a door-plate for a waif; what is that but a Fast-Fish? What is the ruinous discount which Mordecai, the broker, gets from poor Woebegone, the bankrupt, on a loan to keep Woebegone’s family from starvation; what is that ruinous discount but a Fast-Fish? What is the Archbishop of Savesoul’s income of £100,000 seized from the scant bread and cheese of hundreds of thousands of broken-backed laborers (all sure of heaven without any of Savesoul’s help) what is that globular £100,000 but a Fast-Fish? What are the Duke of Dunder’s hereditary towns and hamlets but Fast-Fish? What to that redoubted harpooneer, John Bull, is poor Ireland, but a Fast-Fish? What to that apostolic lancer, Brother Jonathan, is Texas but a Fast-Fish? And concerning all these, is not Possession the whole of the law?</p>
+
+        <p>But if the doctrine of Fast-Fish be pretty generally applicable, the kindred doctrine of Loose-Fish is still more widely so. That is internationally and universally applicable.</p>
+
+        <p>What was America in 1492 but a Loose-Fish, in which Columbus struck the Spanish standard by way of waifing it for his royal master and mistress? What was Poland to the Czar? What Greece to the Turk? What India to England? What at last will Mexico be to the United States? All Loose-Fish.</p>
+
+        <p>What are the Rights of Man and the Liberties of the World but Loose-Fish? What all men’s minds and opinions but Loose-Fish? What is the principle of religious belief in them but a Loose-Fish? What to the ostentatious smuggling verbalists are the thoughts of thinkers but Loose-Fish? What is the great globe itself but a Loose-Fish? And what are you, reader, but a Loose-Fish and a Fast-Fish, too?</p>
+
+        <div class="chapter-note">Chapter 89</div>
+    </div>
+
+    <p class="quote-block">But even Solomon, he says, “the man that wandereth out of the way of understanding shall remain” (i.e., even while living) “in the congregation of the dead.” Give not thyself up, then, to fire, lest it invert thee, deaden thee; as for the time it did me. There is a wisdom that is woe; but there is a woe that is madness. And there is a Catskill eagle in some souls that can alike dive down into the blackest gorges, and soar out of them again and become invisible in the sunny spaces. And even if he for ever flies within the gorge, that gorge is in the mountains; so that in his lowest swoop the mountain eagle is still higher than other birds upon the plain, even though they soar.</p>
+
+    <div class="chapter-note">Chapter 97</div>
+
+    <p class="quote-block">Thou canst not tell where one drop of water or one grain of sand will be to-morrow noon; and yet with thy impotence thou insultest the sun! Science! Curse thee, thou vain toy; and cursed be all the things that cast man’s eyes aloft to that heaven, whose live vividness but scorches him, as these old eyes are even now scorched with thy light, O sun! Level by nature to this earth’s horizon are the glances of man’s eyes; not shot from the crown of his head, as if God had meant him to gaze on his firmament.</p>
+
+    <div class="chapter-note">Chapter 118</div>
+
+    <p class="quote-block">“Oh! thou clear spirit of clear fire, whom on these seas I as Persian once did worship, till in the sacramental act so burned by thee, that to this hour I bear the scar; I now know thee, thou clear spirit, and I now know that thy right worship is defiance. To neither love nor reverence wilt thou be kind; and e’en for hate thou canst but kill; and all are killed. No fearless fool now fronts thee. I own thy speechless, placeless power; but to the last gasp of my earthquake life will dispute its unconditional, unintegral mastery in me. In the midst of the personified impersonal, a personality stands here. Though but a point at best; whencesoe’er I came; wheresoe’er I go; yet while I earthly live, the queenly personality lives in me, and feels her royal rights. But war is pain, and hate is woe. Come in thy lowest form of love, and I will kneel and kiss thee; but at thy highest, come as mere supernal power; and though thou launchest navies of full-freighted worlds, there’s that in here that still remains indifferent. Oh, thou clear spirit, of thy fire thou madest me, and like a true child of fire, I breathe it back to thee.”</p>
+
+    <p class="quote-block">[Sudden, repeated flashes of lightning; the nine flames leap lengthwise to thrice their previous height; Ahab, with the rest, closes his eyes, his right hand pressed hard upon them.]</p>
+
+    <p class="quote-block">“I own thy speechless, placeless power; said I not so? Nor was it wrung from me; nor do I now drop these links. Thou canst blind; but I can then grope. Thou canst consume; but I can then be ashes. Take the homage of these poor eyes, and shutter-hands. I would not take it. The lightning flashes through my skull; mine eye-balls ache and ache; my whole beaten brain seems as beheaded, and rolling on some stunning ground. Oh, oh! Yet blindfold, yet will I talk to thee. Light though thou be, thou leapest out of darkness; but I am darkness leaping out of light, leaping out of thee! The javelins cease; open eyes; see, or not? There burn the flames! Oh, thou magnanimous! now I do glory in my genealogy. But thou art but my fiery father; my sweet mother, I know not. Oh, cruel! what hast thou done with her? There lies my puzzle; but thine is greater. Thou knowest not how came ye, hence callest thyself unbegotten; certainly knowest not thy beginning, hence callest thyself unbegun. I know that of me, which thou knowest not of thyself, oh, thou omnipotent. There is some unsuffusing thing beyond thee, thou clear spirit, to whom all thy eternity is but time, all thy creativeness mechanical. Through thee, thy flaming self, my scorched eyes do dimly see it. Oh, thou foundling fire, thou hermit immemorial, thou too hast thy incommunicable riddle, thy unparticipated grief. Here again with haughty agony, I read my sire. Leap! leap up, and lick the sky! I leap with thee; I burn with thee; would fain be welded with thee; defyingly I worship thee!”</p>
+
+    <div class="chapter-note">Chapter 119</div>
+</section>
+
+<section class="section">
+    <div class="section-title">TAKE UP ARMS AGAINST A SEA</div>
+</section>
+
+<section class="subsection">
+    <h3>Lots of Homeric Epithets</h3>
+    <ul>
+        <li><em>ivory-ribbed chest</em></li>
+        <li><em>rain-bowed jet</em></li>
+        <li><em>death-glorious ship</em></li>
+    </ul>
+</section>
+
+<section class="subsection">
+    <h3>Powerful Images</h3>
+    <ul>
+        <li>Queequeg and Ishmael smoking together in the room</li>
+        <li>Father Mapple preaching on his Captain’s pulpit</li>
+        <li>The interpretable painting in the Spouter Inn</li>
+        <li>Queequeg hoisting a wheelbarrow above his shoulders</li>
+        <li>Spouter Inn barkeep standing in the jaw of the mastodon</li>
+        <li>whatever is going on at the end of 121 and the top of 122</li>
+        <li>A bipedal Ahab slashing at the Leviathan with his knife</li>
+    </ul>
+</section>
+
+<section class="cetology">
+    CETOTOLOGY NOTES
+</section>
+
+<p>might be noticing a lack of Orcas (killer whales) and/or Blue Whales in the description of behemoth Leviathans.</p>
+
 </body>
 </html>
